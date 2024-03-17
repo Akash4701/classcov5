@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'; // Import default styles which you can override
 
-function CalendarDate() {
-  const [value, onChange] = useState(new Date());
+import { useState } from 'react';
+import Calendar from 'react-calendar';
+
+
+function CalendarApp() {
+  const [date, setDate] = useState(new Date());
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="bg-white rounded-lg shadow p-4">
-        <Calendar onChange={onChange} value={value} className="border-none" />
+    <div className='app'>
+     
+      <div className='calendar-container w-[450px] p-4 bg-slate-600 flex rounded-3xl'>
+        <Calendar onChange={setDate} value={date} />
+        <p className='text-center'>
+        <span className='bold'></span>{' '}
+        {date.toDateString()}
+      </p>
       </div>
+      
     </div>
   );
 }
 
-export default CalendarDate;
+export default CalendarApp;

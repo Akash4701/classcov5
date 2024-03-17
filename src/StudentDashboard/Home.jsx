@@ -74,12 +74,12 @@ function Home() {
                     <FaNoteSticky className='text-3xl'/>
                 </div>
                 <h1>15</h1>
-              <div>
-              <Calendar/>
-              </div>
+              
             </div>
         </div>
-    
+        <div className='flex justify-center items-center'>
+              <Calendar/>
+              </div>
 
         <div className='charts'>
          <div>
